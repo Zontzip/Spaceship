@@ -61,7 +61,7 @@ int bullet_height = 31;
 Player player;
 Enemy[] enemies = new Enemy[8];
 Friendly[] friendlies = new Friendly[3];
-ArrayList <Bullet> bullets = new ArrayList<Bullet>();
+ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
 void setup() 
 {
@@ -152,10 +152,9 @@ void draw()
       
       // Lazerz
       for (int i = 0; i < bullets.size(); i++) {
-        bullets.get(i);
-        bullets.display();
-        bullets.move();
-        bullets.boom();
+        bullets.get(i).display();
+        bullets.get(i).move();
+        bullets.get(i).boom();
       }
       
       if (lives == 0) {
